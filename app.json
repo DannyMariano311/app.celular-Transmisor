@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "Transmisor Buses Amaga",
+    "slug": "transmisor-buses-amaga",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": false,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "La cámara trasera transmite el recorrido del bus.",
+        "NSMicrophoneUsageDescription": "El micrófono se solicita para completar el stream WebRTC, aunque el audio se silencia.",
+        "NSLocationWhenInUseUsageDescription": "La ubicación permite enviar la posición del bus.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "La ubicación permite enviar la posición del bus durante el recorrido, incluso en segundo plano.",
+        "UIBackgroundModes": [
+          "location"
+        ]
+      },
+      "bitcode": false
+    },
+    "android": {
+      "usesCleartextTraffic": true,
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.CAMERA",
+        "android.permission.INTERNET",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.WAKE_LOCK",
+        "android.permission.BLUETOOTH"
+      ],
+      "package": "com.amaga.transmisor"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Permite enviar la ubicación del bus durante todo el recorrido."
+        }
+      ],
+      "@config-plugins/react-native-webrtc"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "15d0d0c9-a587-45b7-8c62-b0cde4a8ca03"
+      }
+    }
+  }
+}
